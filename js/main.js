@@ -1,3 +1,55 @@
+ function highlight(el){
+   // el.style.backgroundColor = 'blue';
+
+   if( el.style.backgroundColor == 'white'){ //white turn to yellow
+    el.style.backgroundColor = 'yellow';
+   } else {
+    el.style.backgroundColor = 'white';
+
+   }
+ }
+ 
+ function myAlert(){
+    alert("I'm clicked!");
+ }
+
+ let spans = document.querySelectorAll("#play span");
+
+
+
+ console.log(spans);
+
+ for(const mySpan of spans){
+   // mySpan.addEventListener("click", myAlert);
+    //alert(mySpan.CDATA_SECTION_NODE.actor);
+
+    mySpan.addEventListener("click", function(ev){
+        highlightActor(mySpan.dataset.actor)
+    });
+ }
+
+
+function highlightActor(actor){
+// alert(actor);
+let spans = document.querySelectorAll("#play span");
+
+for(const mySpan of spans){  
+    if(actor == mySpan.dataset.actor ){ //white turn to yellow
+     mySpan.style.backgroundColor = 'yellow';
+    } else {
+     mySpan.style.backgroundColor = 'white';
+ 
+    }
+ 
+  }
+
+}
+
+
+
+
+
+
  //https://tinyurl.com/dynamic-html-checker
  document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
       
@@ -16,3 +68,10 @@
          x.className = "topnav";
      }
  }   
+
+ let actors = document.querySelectorAll(".godmother");
+ 
+//console.log(actors);
+ 
+for (let i = 0; i < actors.length; i++) {
+ actors[i].style.backgroundColor = "orange"; }
