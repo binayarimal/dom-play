@@ -1,4 +1,4 @@
- function highlight(el){
+ /* function highlight(el){
    // el.style.backgroundColor = 'blue';
 
    if( el.style.backgroundColor == 'white'){ //white turn to yellow
@@ -8,26 +8,13 @@
 
    }
  }
- 
+ */
+ //let actors = document.querySelectorAll(".godmother");
  function myAlert(){
     alert("I'm clicked!");
  }
 
  let spans = document.querySelectorAll("#play span");
-
-
-
- console.log(spans);
-
- for(const mySpan of spans){
-   // mySpan.addEventListener("click", myAlert);
-    //alert(mySpan.CDATA_SECTION_NODE.actor);
-
-    mySpan.addEventListener("click", function(ev){
-        highlightActor(mySpan.dataset.actor)
-    });
- }
-
 
 function highlightActor(actor){
 // alert(actor);
@@ -40,16 +27,27 @@ for(const mySpan of spans){
      mySpan.style.backgroundColor = 'white';
  
     }
- 
   }
-
+  
 }
 
+for(const mySpan of spans){
+    // mySpan.addEventListener("click", myAlert);
+     //alert(mySpan.dataset.actor);
+ 
+     mySpan.addEventListener("click", function(ev){
+         highlightActor(mySpan.dataset.actor)
+     });
+  }
+ 
+
+/*for (let i = 0; i < actors.length; i++) {
+    actors[i].style.backgroundColor = "orange"; }
+
+*/
 
 
-
-
-
+/*
  //https://tinyurl.com/dynamic-html-checker
  document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
       
@@ -69,9 +67,8 @@ for(const mySpan of spans){
      }
  }   
 
- let actors = document.querySelectorAll(".godmother");
+ //let actors = document.querySelectorAll(".godmother");
  
 //console.log(actors);
  
-for (let i = 0; i < actors.length; i++) {
- actors[i].style.backgroundColor = "orange"; }
+ */
